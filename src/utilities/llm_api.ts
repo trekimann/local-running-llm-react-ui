@@ -23,3 +23,7 @@ export const generateText = async (
   });
   return response.data.generated_text;
 };
+
+export const createWebSocket = (url: string) => {
+  return new WebSocket(url);
+};

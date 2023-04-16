@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Sidebar from './components/Sidebar';
 import ChatInput from './components/ChatInput';
 import ChatMessages from './components/ChatMessages';
+import Navigation from './components/Navigation';
 import { generateText } from './utilities/llm_api';
 
 const Container = styled.div`
@@ -45,7 +46,7 @@ const App: React.FC = () => {
 
   return (
     <Container>
-       <Sidebar
+       <Navigation
         onApiUrlChange={setAPI_URL}
         onTokenLengthChange={setTokenLength}
         onThreadsChange={setThreads}
